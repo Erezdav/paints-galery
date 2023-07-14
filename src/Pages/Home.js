@@ -70,7 +70,7 @@ function Home() {
   const [gallery, setGallery] = useState([]);
   const [categories, setCategories] = useState([]);
   const [filteredGallery, setFilteredGallery] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState("הכל"); // Initialize with "הכל" as the default category
+  const [selectedCategory, setSelectedCategory] = useState("הכל");
 
   useEffect(() => {
     fetchPaintsInfo();
