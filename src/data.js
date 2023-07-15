@@ -87,12 +87,12 @@ export const links = [
   {
     id: 3,
     url: "/",
-    text: "גלריה",
+    text: "בית",
   },
   {
     id: 2,
-    url: "/about",
-    text: "עלי",
+    url: "/collection",
+    text: "אוסף",
   },
 
   {

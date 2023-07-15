@@ -35,7 +35,7 @@ const Categories = ({ categories, filterItems }) => {
   return (
     <Wrapper>
       <div className="box-container">
-        <h3>בחרו סגנון</h3>
+        <h3>טכניקות ציור</h3>
         <div className="categories">
           {categories.map((category, index) => (
             <button
@@ -69,7 +69,7 @@ const Wrapper = styled.div`
   h3 {
     text-transform: none;
     color: #333;
-    font-size: 1rem;
+    font-size: 0.75rem;
     margin-bottom: 0.5rem;
   }
 

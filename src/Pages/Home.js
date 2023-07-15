@@ -1,129 +1,121 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import Categories from "../Categories";
-import { paints_url } from "../utils/constants";
-import { links } from "../data";
-import Whatsapp from "../Whatsapp";
-import Footer from "../Footer";
-import FetchPaintsInfo from "../FetchPaintsInfo";
+import React from "react";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-// function Home() {
-//   const [gallery, setGallery] = useState([]);
-//   const [categories, setCategories] = useState([]);
-//   const [filteredGallery, setFilteredGallery] = useState([]);
+import aboutImg from "../assets/2.jpg";
 
-//   useEffect(() => {
-//     fetchPaintsInfo();
-//   }, []);
-
-//   const fetchPaintsInfo = async () => {
-//     try {
-//       const response = await axios.get(paints_url);
-//       const data = await response.data;
-//       console.log(data);
-//       setGallery(data);
-
-//       const allCategories = [
-//         "הכל",
-//         ...new Set(data.map((item) => item.category)),
-//       ];
-
-//       setCategories(allCategories);
-//       setFilteredGallery(data);
-//     } catch (error) {
-//       console.log(error);
-//     }
-//   };
-
-//   const filterItems = (category) => {
-//     setFilteredGallery((prevGallery) => {
-//       if (category === "הכל") {
-//         return gallery;
-//       } else {
-//         const newItems = prevGallery.filter(
-//           (item) => item.category === category
-//         );
-//         return newItems;
-//       }
-//     });
-//   };
-//   return (
-//     <main>
-//       <section className="menu section">
-//         <div className="title">
-//           <h2> העבודות שלי</h2>
-//           <div className="underline"></div>
-//         </div>
-//         <Categories categories={categories} filterItems={filterItems} />
-//         <FetchPaintsInfo paints={gallery} />
-//       </section>
-//       <Whatsapp />
-//       <footer>
-//         <Footer />
-//       </footer>
-//     </main>
-//   );
-// }
-
-// export default Home;
-function Home() {
-  const [gallery, setGallery] = useState([]);
-  const [categories, setCategories] = useState([]);
-  const [filteredGallery, setFilteredGallery] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState("הכל");
-
-  useEffect(() => {
-    fetchPaintsInfo();
-  }, []);
-
-  const fetchPaintsInfo = async () => {
-    try {
-      const response = await axios.get(paints_url);
-      const data = await response.data;
-      console.log(data);
-      setGallery(data);
-
-      const allCategories = [
-        "הכל",
-        ...new Set(data.map((item) => item.category)),
-      ];
-
-      setCategories(allCategories);
-      setFilteredGallery(data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  const filterItems = (category) => {
-    if (category === "הכל") {
-      setFilteredGallery(gallery);
-    } else {
-      const newItems = gallery.filter((item) => item.category === category);
-      setFilteredGallery(newItems);
-      console.log(newItems);
-    }
-  };
+const AboutPage = () => {
   return (
-    <main>
-      <section className="menu section">
-        <div className="title">
-          <h2> העבודות שלי</h2>
-          <div className="underline"></div>
-        </div>
-        <Categories
-          categories={categories}
-          filterItems={filterItems}
-          selectedCategory={selectedCategory}
-        />
-        <FetchPaintsInfo paints={filteredGallery} />
-      </section>
-      <Whatsapp />
-      <footer>
-        <Footer />
-      </footer>
-    </main>
-  );
-}
+    <Wrapper>
+      <div className="box-container">
+        <article>
+          <h2>
+            הניה דוידוביץ-<span color="red">אמנית ישראלית</span>{" "}
+          </h2>
 
-export default Home;
+          <div className="underline"></div>
+          <img src={aboutImg} alt="nice desk" className="img" />
+          <p>
+            הציור המפורסם "אמריקן גות'יק", שצויר על ידי גרנט ווד בשנת 1930, מתאר
+            זוג אמריקאי "שמתאים לגור בבית כזה", כמו שאמר האמן. האישה בציור לבושה
+            בסינר אופייני לארצות-הברית של המאה ה-19. שני בני הזוג מציגים את
+            התפקידים המסורתיים של גברים ונשים בני אותה התקופה - הגבר אוחז
+            בקילשון שמשמש לעבודת כפיים והאישה עקרת בית, עם פרחים ובלבוש ביתי. הם
+            מצוירים על רקע בית דו-קומתי (קוטג') שעוצב בסגנון אדריכלי שנקרא
+            "גותיקת הנגרים" והוא מתאפיין בין השאר בחלון עליון ומאורך, כמו זה
+            שנראה בציור. הציור הפך למוכר מאד והרבה מאד התייחסויות אמנותיות היו
+          </p>
+          <div className="image-row">
+            <div className="framed-box">
+              <img src={aboutImg} alt="Image 1" className="image" />
+            </div>
+            <div className="framed-box">
+              <img src={aboutImg} alt="Image 2" className="image" />
+            </div>
+          </div>
+
+          <p>
+            הציור המפורסם "אמריקן גות'יק", שצויר על ידי גרנט ווד בשנת 1930, מתאר
+            זוג אמריקאי "שמתאים לגור בבית כזה", כמו שאמר האמן. האישה בציור לבושה
+            בסינר אופייני לארצות-הברית של המאה ה-19. שני בני הזוג מציגים את
+            התפקידים המסורתיים של גברים ונשים בני אותה התקופה - הגבר אוחז
+            בקילשון שמשמש לעבודת כפיים והאישה עקרת בית, עם פרחים ובלבוש ביתי.
+          </p>
+        </article>
+        <Link className="home-button" to="/Collection">
+          {" "}
+          לגלריה שלי
+        </Link>
+      </div>
+    </Wrapper>
+  );
+};
+
+const Wrapper = styled.main`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: white;
+
+  .box-container {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(1, 0, 0, 0.1);
+    max-width: 800px; /* Add max-width property to limit the width */
+    margin: 0 auto; /* Center the box-container horizontally */
+  }
+
+  h2 {
+    text-transform: none;
+    /* color: #333; */
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .underline {
+    margin: 0 auto 1rem auto;
+    width: 8rem;
+    height: 3px;
+    background-color: #333;
+  }
+
+  p {
+    line-height: 2;
+    color: var(--clr-grey-5);
+    font-size: 16px;
+    text-align: right;
+  }
+
+  .img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 2rem;
+    box-shadow: 0 4px 6px rgba(1, 0, 0, 0.1);
+  }
+  .image-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  .framed-box {
+    width: calc(50% - 1rem); /* Adjust the width as per your preference */
+    padding: 1rem;
+    border: 1px solid #333;
+    border-radius: 5px;
+    margin: 0 0.5rem;
+    box-shadow: 0 4px 6px rgba(1, 0, 0, 0.1);
+  }
+
+  .image {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(1, 0, 0, 0.1);
+  }
+`;
+
+export default AboutPage;

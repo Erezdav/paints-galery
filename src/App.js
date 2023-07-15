@@ -3,8 +3,8 @@ import React, { useState } from "react";
 import Categories from "./Categories";
 
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Collection from "./Pages/Collection";
 import Home from "./Pages/Home";
-import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import Error from "./Pages/Error";
 
@@ -29,8 +29,8 @@ function App() {
         </nav> */}
         <Navbar />
         <Routes>
+          <Route path="/collection" element={<Collection />} />
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<Error />} />
         </Routes>

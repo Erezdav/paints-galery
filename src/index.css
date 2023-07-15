@@ -190,8 +190,8 @@ Menu
   margin: 0 auto;
   max-width: 1170px;
   display: grid;
-  grid-gap: 12px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
   justify-items: center;
 }
 
@@ -248,17 +248,17 @@ Menu
 
 .menu-item {
   display: grid;
-  max-width: 40rem;
+  max-width: 60rem;
   grid-gap: 1px; /* Added gap between .price and .item-info */
   /* width: 100%; */
-  max-width: 20rem; /* Increase the max-width value as needed */
-  grid-template-columns: 200px 1fr;
+
+  grid-template-columns: 300px 1fr;
   gap: 0 1.25rem;
 }
 
 .img {
   object-fit: cover;
-  height: 300px;
+  height: 400px;
   width: 100%;
   border-radius: var(--radius);
 
@@ -440,5 +440,19 @@ nav {
 
   .expand-decrease-icon:hover {
     background-color: rgba(0, 0, 0, 0.7);
+  }
+  .home-button {
+    display: inline-block;
+    background-color: rgb(56, 54, 48);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1rem;
+
+    &:hover {
+      background-color: darkgoldenrod;
+    }
   }
 }
