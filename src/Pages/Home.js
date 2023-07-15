@@ -2,7 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-import aboutImg from "../assets/2.jpg";
+import aboutImg from "../assets/IMG-20230715-WA0003.jpg";
+import aboutImg1 from "../assets/1689433945549.jpg";
+import aboutImg2 from "../assets/IMG-20230715-WA0019.jpg";
 
 const AboutPage = () => {
   return (
@@ -27,10 +29,10 @@ const AboutPage = () => {
           </p>
           <div className="image-row">
             <div className="framed-box">
-              <img src={aboutImg} alt="Image 1" className="image" />
+              <img src={aboutImg1} alt="Image 1" className="image" />
             </div>
             <div className="framed-box">
-              <img src={aboutImg} alt="Image 2" className="image" />
+              <img src={aboutImg2} alt="Image 2" className="image" />
             </div>
           </div>
 
@@ -42,7 +44,11 @@ const AboutPage = () => {
             בקילשון שמשמש לעבודת כפיים והאישה עקרת בית, עם פרחים ובלבוש ביתי.
           </p>
         </article>
-        <Link className="home-button" to="/Collection">
+        <Link
+          style={{ fontSize: "14px", padding: "1rem" }}
+          className="home-button"
+          to="/Collection"
+        >
           {" "}
           לגלריה שלי
         </Link>

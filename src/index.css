@@ -443,16 +443,18 @@ nav {
   }
   .home-button {
     display: inline-block;
-    background-color: rgb(56, 54, 48);
-    color: white;
+    background-color: transparent;
+    color: rgb(17, 6, 6);
     padding: 0.5rem 1rem;
     border-radius: 5px;
+    border: 2px solid black;
     text-decoration: none;
     font-weight: bold;
     margin-top: 1rem;
 
     &:hover {
       background-color: darkgoldenrod;
+      color: #fff;
     }
   }
 }
