@@ -35,6 +35,7 @@ const AboutPage = () => {
               <img src={aboutImg2} alt="Image 2" className="image" />
             </div>
           </div>
+          <br></br>
 
           <p>
             הציור המפורסם "אמריקן גות'יק", שצויר על ידי גרנט ווד בשנת 1930, מתאר
@@ -111,8 +112,9 @@ const Wrapper = styled.main`
   .framed-box {
     width: calc(50% - 1rem); /* Adjust the width as per your preference */
     padding: 1rem;
-    border: 1px solid #333;
-    border-radius: 5px;
+    border: 1px solid #c59d5f;
+
+    border-radius: 8px;
     margin: 0 0.5rem;
     box-shadow: 0 4px 6px rgba(1, 0, 0, 0.1);
   }
