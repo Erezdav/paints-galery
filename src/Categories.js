@@ -17,7 +17,7 @@ const Categories = ({ categories, filterItems }) => {
     <Wrapper>
       <div className="box-container">
         <h3> נושאי ציור</h3>
-        <div className="categories">
+        <div>
           {categories.map((category, index) => (
             <button
               key={index}

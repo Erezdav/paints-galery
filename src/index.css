@@ -166,10 +166,10 @@ Menu
 .filter-btn {
   background: transparent;
   border-color: transparent;
-  font-size: 1rem;
+  font-size: 0.9rem;
   text-transform: capitalize;
   margin: 0 0.5rem;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   padding: 0.375rem 0.75rem;
   color: var(--clr-gold);
   cursor: pointer;
@@ -456,5 +456,8 @@ nav {
       background-color: darkgoldenrod;
       color: #fff;
     }
+  }
+  .box-container {
+    font-size: 12px;
   }
 }
