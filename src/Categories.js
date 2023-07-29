@@ -1,22 +1,3 @@
-// const Categories = ({ categories, filterItems }) => {
-//   return (
-//     <div className="btn-container">
-//       {categories.map((category, index) => {
-//         return (
-//           <button
-//             type="button"
-//             className="filter-btn"
-//             key={index}
-//             onClick={() => filterItems(category)}
-//           >
-//             {category}
-//           </button>
-//         );
-//       })}
-//     </div>
-//   );
-// };
-
 import React, { useState } from "react";
 import styled from "styled-components";
 
@@ -35,7 +16,7 @@ const Categories = ({ categories, filterItems }) => {
   return (
     <Wrapper>
       <div className="box-container">
-        <h3>טכניקות ציור</h3>
+        <h3> נושאי ציור</h3>
         <div className="categories">
           {categories.map((category, index) => (
             <button
