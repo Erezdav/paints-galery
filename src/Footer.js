@@ -5,7 +5,7 @@ const Footer = () => {
     <Container>
       <h5>
         &copy; {new Date().getFullYear()}
-        <span> לרכישה: 0522215555 </span>
+        <span> הניה אומנית ישראלית </span>
       </h5>
       <h5>כל הזכויות שמורות להניה דוידוביץ</h5>
     </Container>
