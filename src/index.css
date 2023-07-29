@@ -166,10 +166,10 @@ Menu
 .filter-btn {
   background: transparent;
   border-color: transparent;
-  font-size: 0.9rem;
+  font-size: 0.8rem !important;
   text-transform: capitalize;
   margin: 0 0.5rem;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
   padding: 0.375rem 0.75rem;
   color: var(--clr-gold);
   cursor: pointer;
