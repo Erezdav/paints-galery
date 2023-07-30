@@ -343,13 +343,13 @@ nav {
   display: flex;
   align-items: right;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 .nav-header {
   display: flex;
   align-items: center; /* Align items vertically in the center */
   justify-content: space-between; /* Put items on opposite ends */
-  padding: 1rem;
+  padding: 0.5rem;
 }
 .nav-toggle {
   font-size: 1.5rem;
