@@ -446,23 +446,4 @@ nav {
   .expand-decrease-icon:hover {
     background-color: rgba(0, 0, 0, 0.7);
   }
-  .home-button {
-    display: inline-block;
-    background-color: transparent;
-    color: rgb(17, 16, 6);
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    border: 2px solid rgb(161, 159, 5);
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 1rem;
-
-    &:hover {
-      background-color: darkgoldenrod;
-      color: #fff;
-    }
-  }
-  .box-container {
-    font-size: 16px;
-  }
 }

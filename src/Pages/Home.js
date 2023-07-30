@@ -41,11 +41,7 @@ const AboutPage = () => {
             ומרגשת.
           </p>
         </article>
-        <Link
-          style={{ fontSize: "14px", padding: "1rem" }}
-          className="home-button"
-          to="/Collection"
-        >
+        <Link className="home-button" to="/Collection">
           {" "}
           לגלריה שלי
         </Link>
@@ -119,6 +115,42 @@ const Wrapper = styled.main`
     width: 100%;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(1, 0, 0, 0.1);
+  }
+  .home-button {
+    font-size: 14px;
+    padding: 1rem;
+    border: 2px solid var(--clr-gold);
+    color: var(--clr-gold);
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-top: 1rem;
+  }
+  .home-button:hover {
+    background-color: var(--clr-gold); /* Fill color with gold on hover */
+    color: var(--clr-white); /* Change text color on hover */
+  }
+
+  /* Styles for small screens (up to 767px) */
+  @media screen and (max-width: 767px) {
+    .home-button {
+      /* Apply styles specific to small screens here */
+    }
+  }
+
+  /* Styles for medium screens (768px to 991px) */
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    .home-button {
+      /* Apply styles specific to medium screens here */
+    }
+  }
+
+  /* Styles for large screens (992px and above) */
+  @media screen and (min-width: 992px) {
+    .home-button {
+      /* Apply styles specific to large screens here */
+    }
   }
 `;
 
