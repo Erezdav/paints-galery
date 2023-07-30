@@ -340,11 +340,15 @@ Menu
 nav {
   background: var(--clr-white);
   box-shadow: var(--light-shadow);
+  display: flex;
+  align-items: right;
+  justify-content: space-between;
+  padding: 1rem;
 }
 .nav-header {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: center; /* Align items vertically in the center */
+  justify-content: space-between; /* Put items on opposite ends */
   padding: 1rem;
 }
 .nav-toggle {
@@ -360,7 +364,7 @@ nav {
   transform: rotate(90deg);
 }
 .logo {
-  height: 100px;
+  height: 200px;
 }
 .links a {
   color: var(--clr-grey-3);
@@ -405,6 +409,7 @@ nav {
   }
   .links {
     display: flex;
+    align-items: center;
   }
   .links a {
     padding: 0;
