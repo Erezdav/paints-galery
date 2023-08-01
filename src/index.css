@@ -176,15 +176,12 @@ Menu
   transition: var(--transition);
   border-radius: var(--radius);
 }
-.filter-btn.active {
-  background: var(--clr-gold);
-  color: var(--clr-white);
-}
-
+.filter-btn.activ,
 .filter-btn:hover {
   background: var(--clr-gold);
   color: var(--clr-white);
 }
+
 .section-center {
   width: 90vw;
   margin: 0 auto;
@@ -291,9 +288,7 @@ Menu
   flex-direction: column;
   justify-content: left; */
 }
-.price-container {
-  margin-bottom: 12rem;
-}
+
 .price {
   color: var(--clr-gold);
 }
