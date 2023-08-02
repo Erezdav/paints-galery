@@ -38,7 +38,7 @@ const loadingCircleVariants = {
   },
 };
 const loadingCircleTransition = {
-  duration: 0.4,
+  duration: 0.2,
   yoyo: Infinity,
   ease: "easeInOut",
 };

@@ -315,7 +315,17 @@ Menu
     gap: 0 1.25rem;
     max-width: 40rem;
   }
+  .loader-container {
+    position: static;
+    transform: none;
+  }
+}
 
+@media (max-width: 480px) {
+  .loader-container {
+    position: static;
+    transform: none;
+  }
   .img {
     height: 500px;
   }
@@ -441,10 +451,14 @@ nav {
   .expand-decrease-icon:hover {
     background-color: rgba(0, 0, 0, 0.7);
   }
-  .loader {
+  .loader-container {
     position: absolute;
-    top: 50px;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
   }
+
+  /* top: 50px;
+    left: 50%;
+    transform: translateX(-50%); */
 }

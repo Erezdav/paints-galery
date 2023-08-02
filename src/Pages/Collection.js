@@ -53,7 +53,7 @@ function Collection() {
   };
   if (isLoading) {
     return (
-      <div className="loader">
+      <div className="loader-container ">
         <Loader />
       </div>
     );
