@@ -441,4 +441,10 @@ nav {
   .expand-decrease-icon:hover {
     background-color: rgba(0, 0, 0, 0.7);
   }
+  .loader {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }

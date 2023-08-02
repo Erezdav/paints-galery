@@ -6,22 +6,26 @@ import { links } from "../data";
 import Whatsapp from "../Whatsapp";
 import Footer from "../Footer";
 import FetchPaintsInfo from "../FetchPaintsInfo";
+import { is } from "@babel/types";
+import Loader from "../Loader";
 
 function Collection() {
   const [gallery, setGallery] = useState([]);
   const [categories, setCategories] = useState([]);
   const [filteredGallery, setFilteredGallery] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("הכל");
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     fetchPaintsInfo();
   }, []);
 
   const fetchPaintsInfo = async () => {
+    setIsLoading(true);
     try {
       const response = await axios.get(paints_url);
       const data = await response.data;
-      console.log(data);
+
       setGallery(data);
 
       const allCategories = [
@@ -31,8 +35,10 @@ function Collection() {
 
       setCategories(allCategories);
       setFilteredGallery(data);
+      setIsLoading(false);
     } catch (error) {
       console.log(error);
+      setIsLoading(false);
     }
   };
 
@@ -45,6 +51,13 @@ function Collection() {
       console.log(newItems);
     }
   };
+  if (isLoading) {
+    return (
+      <div className="loader">
+        <Loader />
+      </div>
+    );
+  }
   return (
     <main>
       <section className="menu section">
