@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import aboutImg from "../assets/IMG-20230715-WA0003.jpg";
 import aboutImg1 from "../assets/1689433945549.jpg";
 import aboutImg2 from "../assets/IMG-20230715-WA0019.jpg";
+import henia from "../assets/henia.jpeg";
 
 const AboutPage = () => {
   return (
@@ -17,6 +18,7 @@ const AboutPage = () => {
           </h2>
 
           <div className="underline"></div>
+          <img src={henia} alt="nice desk" className="img" />
           <img src={aboutImg} alt="nice desk" className="img" />
           <p>
             שמי הניה דוידוביץ ואני אמנית וציירת המתגוררת בקצרין-רמת הגולן. לאורך
